@@ -73,5 +73,6 @@ describe('AppComponent', function () {
 
     //TODO: Need to test inserting into the model and applying click handler
     //TODO: Finish more tests, pass null, empty string, mix of caps/lower numbers, comma etc
+    //TODO: Test 10 Items appear in History
 
 });
