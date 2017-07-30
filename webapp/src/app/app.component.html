@@ -42,20 +42,15 @@
 
     <h3>Recent Translations</h3>
     <div class="row">
-        <div class="panel panel-default">
+        <div 
+            class="panel panel-default"
+            *ngFor="let hist of translateHistory"
+        >
             <div class="panel-heading">
-                English Example 1
+                {{hist.english}}
             </div>
             <div class="panel-body">
-                Pig Latin Example 1
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                English Example 2
-            </div>
-            <div class="panel-body">
-                Pig Latin Example 2
+                {{hist.pigLatin}}
             </div>
         </div>
     </div>

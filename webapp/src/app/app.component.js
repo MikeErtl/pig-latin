@@ -20,6 +20,8 @@ var AppComponent = (function () {
             pigLatin: '',
             warning: ''
         };
+        this.MAX_HISTORY = 10;
+        this.translateHistory = [];
         /**
          * Returns the translated word according to rule 1:
          *
@@ -61,7 +63,7 @@ var AppComponent = (function () {
             // Only translate words which only contain a-z of any case
             if (word.match(/^[a-zA-Z]+$/)) {
                 // Word contains only letters and so is suitable for translation
-                if (word.charAt(0).match(/[a,e,i,o,u]/)) {
+                if (word.charAt(0).match(/[a,e,i,o,u,A,E,I,O,U]/)) {
                     // Starts with a vowel
                     newWord = _this.applyWordRule2(word);
                 }
@@ -74,6 +76,7 @@ var AppComponent = (function () {
         };
         /**
          * Returns the Pig Latin translation of the english word or sentence.
+         *
          * @param eng {String} English word or sentence
          * @returns {String} Pig Latin translation
          */
@@ -96,6 +99,19 @@ var AppComponent = (function () {
             return warning;
         };
         /**
+         * Add a translation to the history up to the max history size
+         */
+        this.addToHistory = function (translation) {
+            if (_this.translateHistory.length >= _this.MAX_HISTORY) {
+                _this.translateHistory.shift();
+            }
+            _this.translateHistory.push({
+                english: translation.english,
+                pigLatin: translation.pigLatin,
+                warning: null
+            });
+        };
+        /**
          * Click handler to initiate the translation
          */
         this.clickTranslateToPigLatin = function () {
@@ -104,6 +120,7 @@ var AppComponent = (function () {
             _this.translation.warning = warn;
             if (!warn) {
                 _this.translation.pigLatin = _this.translateEnglishSentenceToPigLatin(eng);
+                _this.addToHistory(_this.translation);
             }
         };
     }
