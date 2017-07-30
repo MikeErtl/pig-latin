@@ -14,20 +14,26 @@ var Translation = (function () {
 exports.Translation = Translation;
 var AppComponent = (function () {
     function AppComponent() {
-        this.title = 'Pig Latin Converter';
-        this.enterEnglishInstruct = 'English:';
-        this.pigLatinInstruct = 'Pig Latin:';
         this.translation = {
             english: '',
             pigLatin: ''
         };
     }
+    /**
+     * Click handler to initiate the translation
+     */
+    AppComponent.prototype.doTranslation = function () {
+        var eng = this.translation.english;
+        var pig = eng + "war";
+        this.translation.pigLatin = pig;
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
+        moduleId: module.id,
         selector: 'my-app',
-        templateUrl: 'app/app.component.html'
+        templateUrl: 'app.component.html'
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;

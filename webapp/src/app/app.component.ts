@@ -6,17 +6,25 @@ export class Translation {
 }
 
 @Component({
+  moduleId: module.id,
   selector: 'my-app',
-  templateUrl: 'app/app.component.html'
+  templateUrl: 'app.component.html'
 })
 
 export class AppComponent  { 
-  title = 'Pig Latin Converter';
-  enterEnglishInstruct = 'English:'; 
-  pigLatinInstruct = 'Pig Latin:'
   translation: Translation = {
       english: '',
       pigLatin: ''
   };
+
+  /**
+   * Click handler to initiate the translation
+   */
+  doTranslation() { 
+        let eng = this.translation.english;
+        let pig = eng + "war"
+        this.translation.pigLatin = pig;
+    }
+
 }
 
