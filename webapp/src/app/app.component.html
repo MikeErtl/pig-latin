@@ -12,6 +12,12 @@
             [(ngModel)]="translation.english" 
             placeholder="Enter English sentence or word"
         >
+        <div
+            *ngIf="translation.warning" 
+            class="alert alert-warning"
+        >
+            <strong>Warning!</strong> {{translation.warning}} 
+        </div>
     </div>    
 
     <h2></h2>
@@ -19,7 +25,7 @@
         <button 
             type="button" 
             class="btn btn-primary btn-lg"
-            (click)="doTranslation()"
+            (click)="clickTranslateToPigLatin()"
         >
             Translate to Pig Latin
         </button>

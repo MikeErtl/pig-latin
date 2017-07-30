@@ -11,7 +11,6 @@ describe('AppComponent', function () {
   let fixture: ComponentFixture<AppComponent>;
 
   beforeEach(async(() => {
-    //TestBed.compileComponents();//MIKE
     TestBed.configureTestingModule({
       imports: [ FormsModule ],
       schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
@@ -25,6 +24,18 @@ describe('AppComponent', function () {
     comp = fixture.componentInstance;
   });
 
+  // Sanity test - the component loaded!
   it('should create component', () => expect(comp).toBeDefined() );
+
+  // Test complete translation function for a sentence 
+  it("translates a simple sentence using translateEnglishSentenceToPigLatin()", function () { //MIKE:TODO Just a test
+        var eng = "Cat";
+        var pigLatin = comp.translateEnglishSentenceToPigLatin(eng);
+
+        // Check the results; "expect" and toEqual are Jasmine methods.
+        expect(pigLatin).toEqual("Catay");
+    });
+ 
+
 
 });
