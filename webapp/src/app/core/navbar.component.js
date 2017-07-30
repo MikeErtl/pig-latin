@@ -5,30 +5,23 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+// core/navbar.component.ts
 var core_1 = require("@angular/core");
-var Translation = (function () {
-    function Translation() {
+var NavbarComponent = (function () {
+    function NavbarComponent() {
+        this.isIn = false; // store state
     }
-    return Translation;
+    NavbarComponent.prototype.toggleState = function () {
+        var bool = this.isIn;
+        this.isIn = bool === false ? true : false;
+    };
+    return NavbarComponent;
 }());
-exports.Translation = Translation;
-var AppComponent = (function () {
-    function AppComponent() {
-        this.title = 'Pig Latin Converter';
-        this.enterEnglishInstruct = 'English:';
-        this.pigLatinInstruct = 'Pig Latin:';
-        this.translation = {
-            english: '',
-            pigLatin: ''
-        };
-    }
-    return AppComponent;
-}());
-AppComponent = __decorate([
+NavbarComponent = __decorate([
     core_1.Component({
-        selector: 'my-app',
-        templateUrl: 'app/app.component.html'
+        selector: 'ct-navbar',
+        templateUrl: 'app/core/navbar.component.html'
     })
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], NavbarComponent);
+exports.NavbarComponent = NavbarComponent;
+//# sourceMappingURL=navbar.component.js.map

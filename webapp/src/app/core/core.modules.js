@@ -5,26 +5,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+// core/core.module.ts
 var core_1 = require("@angular/core");
-var platform_browser_1 = require("@angular/platform-browser");
-var forms_1 = require("@angular/forms");
-var core_modules_1 = require("./core/core.modules");
-var app_component_1 = require("./app.component");
-var AppModule = (function () {
-    function AppModule() {
+var common_1 = require("@angular/common");
+var navbar_component_1 = require("./navbar.component");
+var CoreModule = (function () {
+    function CoreModule() {
     }
-    return AppModule;
+    return CoreModule;
 }());
-AppModule = __decorate([
+CoreModule = __decorate([
     core_1.NgModule({
-        imports: [
-            platform_browser_1.BrowserModule,
-            forms_1.FormsModule,
-            core_modules_1.CoreModule,
-        ],
-        declarations: [app_component_1.AppComponent],
-        bootstrap: [app_component_1.AppComponent]
+        imports: [common_1.CommonModule],
+        declarations: [navbar_component_1.NavbarComponent],
+        exports: [navbar_component_1.NavbarComponent],
+        providers: []
     })
-], AppModule);
-exports.AppModule = AppModule;
-//# sourceMappingURL=app.module.js.map
+], CoreModule);
+exports.CoreModule = CoreModule;
+//# sourceMappingURL=core.modules.js.map
