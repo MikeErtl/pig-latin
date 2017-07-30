@@ -16,7 +16,12 @@ To start the server run
 ```npm start```
 and Ctrl-C to stop it
 
-# User Interface 
+# Tests
+To run unit tests
+```npm test```
+and Ctrl-C to stop it
+
+
 
  
 
