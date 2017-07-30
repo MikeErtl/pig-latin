@@ -1,0 +1,51 @@
+<div class='container'>
+
+<ct-navbar></ct-navbar>
+
+<div class='jumbotron'>
+
+    <h2>English</h2>
+    <div class="row">
+        <input 
+            type="textarea"
+            class="form-control"
+            [(ngModel)]="translation.english" 
+            placeholder="Enter English sentence or word"
+        >
+    </div>    
+
+    <h2></h2>
+    <div class="row">
+        <button type="button" class="btn btn-primary btn-lg">Translate to Pig Latin</button>
+    </div>    
+
+    <h2>Pig Latin</h2>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-body">
+                {{translation.pigLatin}}
+            </div>
+        </div>
+    </div>
+
+    <h3>Recent Translations</h3>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                English Example 1
+            </div>
+            <div class="panel-body">
+                Pig Latin Example 1
+            </div>
+        </div>
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                English Example 2
+            </div>
+            <div class="panel-body">
+                Pig Latin Example 2
+            </div>
+        </div>
+    </div>
+
+</div>
