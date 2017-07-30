@@ -12,11 +12,23 @@
             [(ngModel)]="translation.english" 
             placeholder="Enter English sentence or word"
         >
+        <div
+            *ngIf="translation.warning" 
+            class="alert alert-warning"
+        >
+            <strong>Warning!</strong> {{translation.warning}} 
+        </div>
     </div>    
 
     <h2></h2>
     <div class="row">
-        <button type="button" class="btn btn-primary btn-lg">Translate to Pig Latin</button>
+        <button 
+            type="button" 
+            class="btn btn-primary btn-lg"
+            (click)="clickTranslateToPigLatin()"
+        >
+            Translate to Pig Latin
+        </button>
     </div>    
 
     <h2>Pig Latin</h2>
@@ -30,20 +42,15 @@
 
     <h3>Recent Translations</h3>
     <div class="row">
-        <div class="panel panel-default">
+        <div 
+            class="panel panel-default"
+            *ngFor="let hist of translateHistory"
+        >
             <div class="panel-heading">
-                English Example 1
+                {{hist.english}}
             </div>
             <div class="panel-body">
-                Pig Latin Example 1
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                English Example 2
-            </div>
-            <div class="panel-body">
-                Pig Latin Example 2
+                {{hist.pigLatin}}
             </div>
         </div>
     </div>

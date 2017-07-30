@@ -17,6 +17,7 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
+        schemas: [core_1.CUSTOM_ELEMENTS_SCHEMA],
         imports: [
             platform_browser_1.BrowserModule,
             forms_1.FormsModule,
