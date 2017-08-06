@@ -12,7 +12,8 @@ import { AppComponent }  from './app.component';
       FormsModule,
       CoreModule,
   ],
+  providers: [],
   declarations: [ AppComponent ],
-  bootstrap:    [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
