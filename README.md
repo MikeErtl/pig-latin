@@ -1,8 +1,16 @@
 # Pig-latin
 
+[![CI Status]
+   (http://img.shields.io/travis/roamlrs/roamlrs.svg?style=flat)]
+   (https://travis-ci.org/roamlrs/roamlrs)
+
 Simple demo project in Angular 2 for converting English to Pig Latin (just two rules implemented)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7.
+
+
+
+# Standard Instructions from Angular/cli
 
 ## Development server
 
