@@ -1,10 +1,5 @@
-# Pig-latin https://travis-ci.org/MikeErtl/pig-latin.svg?branch=master
+# Pig-latin [![Build Status](https://travis-ci.org/MikeErtl/pig-latin.svg?branch=master)](https://travis-ci.org/MikeErtl/pig-latin)
 
-
-
-[![CI Status]
-   (http://img.shields.io/travis/roamlrs/roamlrs.svg?style=flat)]
-   (https://travis-ci.org/roamlrs/roamlrs)
 
 Simple demo project in Angular 2 for converting English to Pig Latin (just two rules implemented)
 
