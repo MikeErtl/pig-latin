@@ -1,13 +1,17 @@
-# Pig-latin [![Build Status](https://travis-ci.org/MikeErtl/pig-latin.svg?branch=master)](https://travis-ci.org/MikeErtl/pig-latin)
-
+# Pig-latin 
 
 Simple demo project in Angular 2 for converting English to Pig Latin (just two rules implemented)
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.2.7.
 
+# Build Status [![Build Status](https://travis-ci.org/MikeErtl/pig-latin.svg?branch=master)](https://travis-ci.org/MikeErtl/pig-latin)
+It is running with Travis Continuous Integration, click on the status icon for link.
+
+# Cloud Instance
+A release is running on Cloudfront in an S3 bucket here:
+http://cloud.pig-latin.com.s3-website.eu-west-2.amazonaws.com
 
 
-# Standard Instructions from Angular/cli
+# Standard Instructions from Angular/cli for local development
 
 ## Development server
 
